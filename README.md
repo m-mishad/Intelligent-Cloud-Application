@@ -87,7 +87,7 @@ repository of Minikube since the image is bigger in size.
 
 
 
-## Step 3: Deploy the application as a microservices:
+## Step 3: Deploying the applications as a microservices:
 
 To create the deployments and services, follow the steps:
 
@@ -96,6 +96,7 @@ Run all the commands from the directory YAML-Deployments-&-Services/
 To deploying cnn-app:
 
 ``` kubectl apply -f cnn-app-deployment.yaml ```
+
 ``` kubectl apply -f cnn-app-svc.yaml ```
 
 For translation, we can choose any of the deployment. We can choose
