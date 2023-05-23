@@ -1,4 +1,4 @@
-# Description
+# Description of the application
 
 The application allows users to upload a handwritten single-digit image,
 which is then processed by a prediction server. The predicted digit is
