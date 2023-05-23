@@ -112,7 +112,7 @@ Azure translation service key, endpoint, and location.
 
 ```vi translation-app-azure-deployment.yaml```
 
-env:
+[[env:
 
 \- name: \"KEY\"
 
@@ -124,7 +124,7 @@ value: \"\<replace with your azure translation service endpoint\>\"
 
 \- name: \"LOCATION\"
 
-value: \"\<replace with your azure translation service location\>\"
+value: \"\<replace with your azure translation service location\>\" ]]
 
 kubectl apply -f translation-app-azure-deployment.yaml
 
