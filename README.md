@@ -1,9 +1,13 @@
+### Description
+
 The application allows users to upload a handwritten single-digit image,
 which is then processed by a prediction server. The predicted digit is
 translated into a user-defined target language and converted to speech
 using other servers. The resulting audio is sent back to the user\'s
 browser for playback. Finally, the user can get the predicted digit in
 the translated language with audio playback in the web browser.
+
+### Architecture
 
 The high-level architecture diagram of this application is as follows:
 
@@ -14,7 +18,7 @@ Microservice architecture:
 > ![](media/image2.png){width="4.5655544619422574in"
 > height="3.811945538057743in"}
 
-**[Prerequisite:]{.underline}**
+### Prerequisites:
 
 1.  Docker is installed in the machine. The installation procedure can be found here:
     > (https://docs.docker.com/engine/install/)
