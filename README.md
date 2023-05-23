@@ -89,26 +89,28 @@ repository of Minikube since the image is bigger in size.
 
 ## Step 3: Deploying the applications as a microservices:
 
-To create the deployments and services, follow the steps:
+To create the deployments and services, follow the steps sequentially:
 
 Run all the commands from the directory ``` YAML-Deployments-&-Services/ ```
 
-To deploying cnn-app:
+# 1. Deploy cnn-app deployment snd service:
 
 ``` kubectl apply -f cnn-app-deployment.yaml ```
 
 ``` kubectl apply -f cnn-app-svc.yaml ```
 
+
+
+# 2. Deploy translation-app-azure deployment and service:
+
 For translation, we can choose any of the deployment. We can choose
 either translation for azure or translation for AWS.
 
-[For translation-app-azure:]{.underline}
-
 Identify the following lines from the file
-translation-app-azure-deployment.yaml and replace the value with your
+```translation-app-azure-deployment.yaml``` and replace the value with your
 Azure translation service key, endpoint, and location.
 
-vi translation-app-azure-deployment.yaml
+```vi translation-app-azure-deployment.yaml```
 
 env:
 
