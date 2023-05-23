@@ -39,7 +39,7 @@ Or AWS user with programmatic access with appropriate permission to use the tran
 A web browser is installed on the same host machine.
 
 Directory structure:
-
+[
 ├── CNN-model
 │   ├── Dockerfile
 │   ├── LICENSE
@@ -106,7 +106,7 @@ Directory structure:
     ├── translation-app-azure-deployment.yaml
     └── translation-app-azure-svc.yaml
 
-
+]
 
 Building docker images:
 
