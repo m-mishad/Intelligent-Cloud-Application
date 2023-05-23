@@ -101,11 +101,12 @@ Run all the commands from the directory ``` YAML-Deployments-&-Services/ ```
 
 
 
-### 2. Deploy translation-app-azure deployment and service:
+### 2. Deploy translation-app deployment and service:
 
 For translation, we can choose any of the deployment. We can choose
 either translation for azure or translation for AWS.
 
+Translation in Azure:
 Identify the following lines from the file
 ```translation-app-azure-deployment.yaml``` and replace the ```value``` with the
 Azure translation service key, endpoint, and location.
@@ -130,10 +131,11 @@ value: \"\<replace with your azure translation service location\>\" ]]
 
 ```kubectl apply -f translation-app-azure-svc.yaml```
 
-[For translation-app-aws:]{.underline}
+Translation in Azure:
+
 
 Identify the following lines from the file
-```translate-app-aws-deployment.yaml``` and replace the value with your AWS
+```translate-app-aws-deployment.yaml``` and replace the ```value``` with your AWS
 access key, secret access key, and default region.
 
 ```vi translate-app-aws-deployment.yaml```
@@ -158,13 +160,15 @@ value: \"\<replace with your aws default region\>\"
 
 
 
-### 3. Deploy speech-app-azure deployment and service:
+### 3. Deploy speech-app deployment and service:
 
 For speech-app, we can choose any of the deployment. We can use either
 speech for azure or speech for AWS.
 
+Speech in Azure:
+
 Identify the following lines from the file
-```speech-app-azure-deployment.yaml``` and replace the value with your Azure
+```speech-app-azure-deployment.yaml``` and replace the ```value``` with your Azure
 speech service key and location.
 
 ```vi speech-app-azure-deployment.yaml```
@@ -180,10 +184,10 @@ value: \"\<replace with your azure speech service for speech key\>\"
 value: \"\<replace with your azure speech service for speech
 location\>\"
 
-[For speech-app-aws:]{.underline}
+Speech in AWS:
 
 Identify the following lines from the file
-```speech-app-aws-deployment.yaml``` and replace the value with your AWS
+```speech-app-aws-deployment.yaml``` and replace the ```value``` with your AWS
 access key, secret access key, and default region.
 
 ```vi speech-app-aws-deployment.yaml```
@@ -206,15 +210,15 @@ value: \"\<replace with your aws default region\>\"
 
 ```kubectl apply -f speech-app-aws-svc.yaml```
 
-[For frontend-app:]{.underline}
+### 3. Deploy frontend-app deployment and service:
 
 Identify the following lines from the file ```frontend-app-deployment.yaml```
-and replace them with the appropriate IP address.
+and replace them with the appropriate ```IP address```.
 
 For the translation and speech, we can either use AWS service or Azure
 service. If we want to use AWS service for example, then we have to
-replace the environment variables value of TRANSLATION and TTS with the
-appropriate IP and port of translate-app-aws and speech-app-aws service.
+replace the environment variables ```value``` of ```TRANSLATION``` and ```TTS``` with the
+appropriate ```IP``` and ```port``` of ```translate-app-aws``` and ```speech-app-aws service```.
 
 ```vi frontend-app-deployment.yaml```
 
@@ -235,7 +239,7 @@ translation-app-azure\>:5002/translate
 value: http://\<replace with the cluster IP of the svc
 speech-app-azure\>:5005/tts
 
-To get the cluster IP and port of the services, run the command:
+To get the ```cluster IP``` and ```port``` of the services, run the command:
 
 ```kubectl get svc```
 
@@ -243,7 +247,7 @@ To get the cluster IP and port of the services, run the command:
 
 ```kubectl apply -f frontend-app-svc.yaml```
 
-**[To browse the application:]{.underline}**
+## Step 4: Browse the application
 
 Identify the node name where the ```frontend-app-xxxxxxxx``` pod is deployed.
 
