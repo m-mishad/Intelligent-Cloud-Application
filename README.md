@@ -221,15 +221,16 @@ replace the environment variables ```value``` of ```TRANSLATION``` and ```TTS```
 appropriate ```IP``` and ```port``` of ```translate-app-aws``` and ```speech-app-aws service```.
 
 ```vi frontend-app-deployment.yaml```
-
+```
 env:
 
 -  name: "PREDICTION"
-   \value: http://<replace with the cluster IP of the svc cnn-app>:5000/predict
+   value: http://<replace with the cluster IP of the svc cnn-app>:5000/predict
 -  name: "TRANSLATION"
-   \value: http://<replace with the cluster IP of the svc translation-app-azure>:5002/translate
+   value: http://<replace with the cluster IP of the svc translation-app-azure>:5002/translate
 -  name: "TTS"
-   \value: http://<replace with the cluster IP of the svc speech-app-azure>:5005/tts
+   value: http://<replace with the cluster IP of the svc speech-app-azure>:5005/tts
+```
 
 To get the ```cluster IP``` and ```port``` of the services, run the command:
 
