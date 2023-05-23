@@ -30,165 +30,36 @@ Microservice architecture:
 
 4.  A web browser is installed on the same host machine.
 
-[Directory structure:]
+## Directory structure
 
-├── CNN-model
 
-│ ├── Dockerfile
+## Step 1: Building docker images:
 
-│ ├── LICENSE
-
-│ ├── \_\_pycache\_\_
-
-│ │ ├── conv.cpython-310.pyc
-
-│ │ ├── maxpool.cpython-310.pyc
-
-│ │ └── softmax.cpython-310.pyc
-
-│ ├── app.py
-
-│ ├── conv.py
-
-│ ├── maxpool.py
-
-│ ├── mymodel
-
-│ │ ├── assets
-
-│ │ ├── fingerprint.pb
-
-│ │ ├── keras_metadata.pb
-
-│ │ ├── saved_model.pb
-
-│ │ └── variables
-
-│ │ ├── variables.data-00000-of-00001
-
-│ │ └── variables.index
-
-│ ├── requirements.txt
-
-│ └── softmax.py
-
-├── Frontend
-
-│ ├── Dockerfile
-
-│ ├── app_translation_speech.py
-
-│ ├── requirements.txt
-
-│ └── templates
-
-│ ├── home.html
-
-│ └── home.html.backup
-
-├── Speech
-
-│ ├── AWS
-
-│ │ ├── Dockerfile
-
-│ │ ├── requirements.txt
-
-│ │ └── speech_aws.py
-
-│ └── Azure
-
-│ ├── Dockerfile
-
-│ ├── requirements.txt
-
-│ └── speech_azure.py
-
-├── Test-images
-
-│ ├── eight.bmp
-
-│ ├── five.jpg
-
-│ ├── four.jpg
-
-│ ├── nine.jpg
-
-│ ├── one.jpg
-
-│ ├── seven.jpg
-
-│ ├── six.jpg
-
-│ ├── three.jpg
-
-│ ├── two.jpg
-
-│ └── zero.jpg
-
-├── Translation
-
-│ ├── aws
-
-│ │ ├── Dockerfile
-
-│ │ ├── requirements.txt
-
-│ │ └── translate-aws.py
-
-│ └── azure
-
-│ ├── Dockerfile
-
-│ ├── requirements.txt
-
-│ └── translate-azure.py
-
-└── YAML-Deployments-&-Services
-
-├── cnn-app-deployment.yaml
-
-├── cnn-app-svc.yaml
-
-├── frontend-app-deployment.yaml
-
-├── frontend-app-svc.yaml
-
-├── speech-app-azure-deployment.yaml
-
-├── speech-app-azure-svc.yaml
-
-├── translation-app-azure-deployment.yaml
-
-└── translation-app-azure-svc.yaml
-
-**[Building docker images:]{.underline}**
-
-To build docker images,
+To build docker images:
 
 Run the following command from the directory Speech/Azure/ :
 
-docker build -t speech-azure-app .
+``` docker build -t speech-azure-app . ```
 
 run the following command from the directory Speech/AWS/ :
 
-docker build -t speech-aws-app .
+``` docker build -t speech-aws-app . ```
 
 run the following command from the directory Translation/aws/ :
 
-docker build -t translate-aws-app .
+``` docker build -t translate-aws-app . ```
 
 run the following command from the directory Translation/azure/ :
 
-docker build -t translate-azure-app .
+``` docker build -t translate-azure-app . ```
 
 run the following command from the directory CNN-model/ :
 
-docker build -t cnn-app .
+``` docker build -t cnn-app . ```
 
 run the following command from the directory Frontend/ :
 
-docker build -t frontend\--app .
+``` docker build -t frontend\--app . ```
 
 docker images
 
@@ -201,7 +72,7 @@ following commands:
 Note: It may take some time to load the cnn-app image to the local image
 repository of Minikube since the image is bigger in size.
 
-minikube cache add speech-azure-app:latest
+``` minikube cache add speech-azure-app:latest
 
 minikube cache add speech-aws-app:latest
 
@@ -213,7 +84,7 @@ minikube cache add cnn-app:latest
 
 minikube cache add frontend\--app:latest
 
-minikube image ls \--format table
+minikube image ls \--format table ```
 
 **[Deploy the application as a microservices:]{.underline}**
 
