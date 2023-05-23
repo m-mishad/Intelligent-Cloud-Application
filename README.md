@@ -61,15 +61,15 @@ run the following command from the directory Frontend/ :
 
 ``` docker build -t frontend\--app . ```
 
-docker images
+``` docker images ```
 
-**[Load Docker images to the local repository of
-Minikube:]{.underline}**
+## Step 2: Loading docker images to the local repository of
+Minikube:
 
 To load the images to the local image repository of Minikube run the
 following commands:
 
-Note: It may take some time to load the cnn-app image to the local image
+Note: It may take some time to load the "cnn-app" image to the local image
 repository of Minikube since the image is bigger in size.
 
 ``` minikube cache add speech-azure-app:latest
@@ -86,17 +86,16 @@ minikube cache add frontend\--app:latest
 
 minikube image ls \--format table ```
 
-**[Deploy the application as a microservices:]{.underline}**
+Step 3: Deploy the application as a microservices:
 
 To create the deployments and services, follow the steps:
 
 Run all the commands from the directory YAML-Deployments-&-Services/
 
-[For cnn-app:]{.underline}
+To deploying cnn-app:
 
-kubectl apply -f cnn-app-deployment.yaml
-
-kubectl apply -f cnn-app-svc.yaml
+``` kubectl apply -f cnn-app-deployment.yaml
+kubectl apply -f cnn-app-svc.yaml ```
 
 For translation, we can choose any of the deployment. We can choose
 either translation for azure or translation for AWS.
