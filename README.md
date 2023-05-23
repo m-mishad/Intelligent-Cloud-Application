@@ -71,19 +71,21 @@ following commands:
 Note: It may take some time to load the "cnn-app" image to the local image
 repository of Minikube since the image is bigger in size.
 
-``` minikube cache add speech-azure-app:latest
+``` minikube cache add speech-azure-app:latest ```
 
-minikube cache add speech-aws-app:latest
+``` minikube cache add speech-aws-app:latest ```
 
-minikube cache add translate-aws-app:latest
+``` minikube cache add translate-aws-app:latest ```
 
-minikube cache add translate-azure-app:latest
+``` minikube cache add translate-azure-app:latest ```
 
-minikube cache add cnn-app:latest
+``` minikube cache add cnn-app:latest ```
 
-minikube cache add frontend\--app:latest
+``` minikube cache add frontend\--app:latest ```
 
-minikube image ls \--format table ```
+``` minikube image ls \--format table ```
+
+
 
 ## Step 3: Deploy the application as a microservices:
 
@@ -93,8 +95,8 @@ Run all the commands from the directory YAML-Deployments-&-Services/
 
 To deploying cnn-app:
 
-``` kubectl apply -f cnn-app-deployment.yaml
-kubectl apply -f cnn-app-svc.yaml ```
+``` kubectl apply -f cnn-app-deployment.yaml ```
+``` kubectl apply -f cnn-app-svc.yaml ```
 
 For translation, we can choose any of the deployment. We can choose
 either translation for azure or translation for AWS.
