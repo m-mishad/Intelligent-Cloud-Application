@@ -15,8 +15,7 @@ The high-level architecture diagram of this application is as follows:
 
 Microservice architecture:
 
-> ![](media/image2.png){width="4.5655544619422574in"
-> height="3.811945538057743in"}
+ ![](media/image2.png){width="4.5655544619422574in" height="3.811945538057743in"}
 
 # Prerequisites:
 
