@@ -112,20 +112,15 @@ Identify the following lines from the file
 Azure translation service key, endpoint, and location.
 
 ```vi translation-app-azure-deployment.yaml```
-
-[[env:
-
-\- name: \"KEY\"
-
-value: \"\<replace with your azure translation service key\>\"
-
-\- name: \"ENDPOINT\"
-
-value: \"\<replace with your azure translation service endpoint\>\"
-
-\- name: \"LOCATION\"
-
-value: \"\<replace with your azure translation service location\>\" ]]
+```
+ env:
+  - name: "KEY"
+    value: "<replace with your azure translation service key>"
+  - name: "ENDPOINT"
+    value: "<replace with your azure translation service endpoint>"
+  - name: "LOCATION"
+    value: "<replace with your azure translation service location>"
+```
 
 ```kubectl apply -f translation-app-azure-deployment.yaml```
 
@@ -139,20 +134,15 @@ Identify the following lines from the file
 access key, secret access key, and default region.
 
 ```vi translate-app-aws-deployment.yaml```
-
-env:
-
-\- name: \"AWS_ACCESS_KEY_ID\"
-
-value: \"\<replace with your aws access key\>\"
-
-\- name: \"AWS_SECRET_ACCESS_KEY\"
-
-value: \"\<replace with your aws secret access key\>\"
-
-\- name: \"AWS_DEFAULT_REGION\"
-
-value: \"\<replace with your aws default region\>\"
+```
+ env:
+  - name: "AWS_ACCESS_KEY_ID"
+    value: "<replace with your aws access key>"
+  - name: "AWS_SECRET_ACCESS_KEY"
+    value: "<replace with your aws secret access key>"
+  - name: "AWS_DEFAULT_REGION"
+    value: "<replace with your aws default region>"
+```
 
 ```kubectl apply -f translate-app-aws-deployment.yaml```
 
@@ -172,18 +162,13 @@ Identify the following lines from the file
 speech service key and location.
 
 ```vi speech-app-azure-deployment.yaml```
-
-env:
-
-\- name: \"SPEECH_KEY\"
-
-value: \"\<replace with your azure speech service for speech key\>\"
-
-\- name: \"SPEECH_LOCATION\"
-
-value: \"\<replace with your azure speech service for speech
-location\>\"
-
+```
+ env:
+  - name: "SPEECH_KEY"
+    value: "<replace with your azure speech service for speech key>"
+  - name: "SPEECH_LOCATION"
+    value: "<replace with your azure speech service for speech location>"
+```
 - Speech in AWS:
 
 Identify the following lines from the file
