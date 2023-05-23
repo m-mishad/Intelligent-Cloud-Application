@@ -85,7 +85,7 @@ minikube cache add frontend\--app:latest
 
 minikube image ls \--format table ```
 
-Step 3: Deploy the application as a microservices:
+## Step 3: Deploy the application as a microservices:
 
 To create the deployments and services, follow the steps:
 
