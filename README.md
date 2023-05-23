@@ -37,27 +37,27 @@ Microservice architecture:
 
 To build docker images:
 
-Run the following command from the directory Speech/Azure/ :
+run the command from the directory Speech/Azure/ :
 
 ``` docker build -t speech-azure-app . ```
 
-run the following command from the directory Speech/AWS/ :
+run the  command from the directory Speech/AWS/ :
 
 ``` docker build -t speech-aws-app . ```
 
-run the following command from the directory Translation/aws/ :
+run the  command from the directory Translation/aws/ :
 
 ``` docker build -t translate-aws-app . ```
 
-run the following command from the directory Translation/azure/ :
+run the  command from the directory Translation/azure/ :
 
 ``` docker build -t translate-azure-app . ```
 
-run the following command from the directory CNN-model/ :
+run the  command from the directory CNN-model/ :
 
 ``` docker build -t cnn-app . ```
 
-run the following command from the directory Frontend/ :
+run the commands from the directory Frontend/ :
 
 ``` docker build -t frontend\--app . ```
 
