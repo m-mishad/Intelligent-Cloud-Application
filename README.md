@@ -107,7 +107,7 @@ For translation, we can choose any of the deployment. We can choose
 either translation for azure or translation for AWS.
 
 Identify the following lines from the file
-```translation-app-azure-deployment.yaml``` and replace the value with the
+```translation-app-azure-deployment.yaml``` and replace the ```value``` with the
 Azure translation service key, endpoint, and location.
 
 ```vi translation-app-azure-deployment.yaml```
