@@ -81,9 +81,9 @@ repository of Minikube since the image is bigger in size.
 
 ``` minikube cache add cnn-app:latest ```
 
-``` minikube cache add frontend\--app:latest ```
+``` minikube cache add frontend-app:latest ```
 
-``` minikube image ls \--format table ```
+``` minikube image ls --format table ```
 
 
 
