@@ -29,8 +29,6 @@ Microservice architecture:
 
 4.  A web browser is installed on the same host machine.
 
-# Directory structure
-
 
 ## Step 1: Building docker images:
 
