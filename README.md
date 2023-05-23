@@ -63,8 +63,7 @@ run the commands from the directory Frontend/ :
 
 ``` docker images ```
 
-## Step 2: Loading docker images to the local repository of
-Minikube:
+## Step 2: Loading docker images to the local repository of Minikube:
 
 To load the images to the local image repository of Minikube run the
 following commands:
