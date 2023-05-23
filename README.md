@@ -1,4 +1,4 @@
-### Description
+# Description
 
 The application allows users to upload a handwritten single-digit image,
 which is then processed by a prediction server. The predicted digit is
@@ -7,7 +7,7 @@ using other servers. The resulting audio is sent back to the user\'s
 browser for playback. Finally, the user can get the predicted digit in
 the translated language with audio playback in the web browser.
 
-### Architecture
+# Architecture
 
 The high-level architecture diagram of this application is as follows:
 
@@ -18,7 +18,7 @@ Microservice architecture:
 > ![](media/image2.png){width="4.5655544619422574in"
 > height="3.811945538057743in"}
 
-### Prerequisites:
+# Prerequisites:
 
 1.  Docker is installed in the machine. The installation procedure can be found here:
     > (https://docs.docker.com/engine/install/)
@@ -30,7 +30,7 @@ Microservice architecture:
 
 4.  A web browser is installed on the same host machine.
 
-## Directory structure
+# Directory structure
 
 
 ## Step 1: Building docker images:
@@ -93,7 +93,7 @@ To create the deployments and services, follow the steps sequentially:
 
 Run all the commands from the directory ``` YAML-Deployments-&-Services/ ```
 
-# 1. Deploy cnn-app deployment snd service:
+### 1. Deploy cnn-app deployment snd service:
 
 ``` kubectl apply -f cnn-app-deployment.yaml ```
 
@@ -101,7 +101,7 @@ Run all the commands from the directory ``` YAML-Deployments-&-Services/ ```
 
 
 
-# 2. Deploy translation-app-azure deployment and service:
+### 2. Deploy translation-app-azure deployment and service:
 
 For translation, we can choose any of the deployment. We can choose
 either translation for azure or translation for AWS.
@@ -158,7 +158,7 @@ value: \"\<replace with your aws default region\>\"
 
 
 
-# 3. Deploy speech-app-azure deployment and service:
+### 3. Deploy speech-app-azure deployment and service:
 
 For speech-app, we can choose any of the deployment. We can use either
 speech for azure or speech for AWS.
