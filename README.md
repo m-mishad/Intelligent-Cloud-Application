@@ -225,19 +225,13 @@ appropriate ```IP``` and ```port``` of ```translate-app-aws``` and ```speech-app
 env:
 
 \- name: \"PREDICTION\"
+   value: http://<replace with the cluster IP of the svc cnn-app>:5000/predict
 
-value: http://\<replace with the cluster IP of the svc cnn-app
-\>:5000/predict
+ - name: "TRANSLATION"
+   value: http://<replace with the cluster IP of the svc translation-app-azure>:5002/translate
 
-\- name: \"TRANSLATION\"
-
-value: http://\<replace with the cluster IP of the svc
-translation-app-azure\>:5002/translate
-
-\- name: \"TTS\"
-
-value: http://\<replace with the cluster IP of the svc
-speech-app-azure\>:5005/tts
+ - name: "TTS"
+   value: http://<replace with the cluster IP of the svc speech-app-azure>:5005/tts
 
 To get the ```cluster IP``` and ```port``` of the services, run the command:
 
@@ -260,7 +254,14 @@ Run the command: ```kubectl get pods -o wide```
 
 Visit the url from the browser:
 
-\<Replace with the internal IP address of the node \>:30364
+<Replace with the internal IP address of the node>:30364
 
 The sample handwritten digit images are located under the directory
-Test-images/
+```Test-images/```
+
+
+
+
+
+
+
