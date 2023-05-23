@@ -24,7 +24,6 @@ The high-level architecture diagram of this application is as follows:
 
 
 
-
 Microservice architecture:
 
 
