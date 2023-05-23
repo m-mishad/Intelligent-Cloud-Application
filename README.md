@@ -33,23 +33,23 @@ run the command from the directory ```Speech/Azure/``` :
 
 ``` docker build -t speech-azure-app . ```
 
-run the  command from the directory ```Speech/AWS/``` :
+from the directory ```Speech/AWS/``` :
 
 ``` docker build -t speech-aws-app . ```
 
-run the  command from the directory ```Translation/aws/``` :
+from the directory ```Translation/aws/``` :
 
 ``` docker build -t translate-aws-app . ```
 
-run the  command from the directory ```Translation/azure/``` :
+from the directory ```Translation/azure/``` :
 
 ``` docker build -t translate-azure-app . ```
 
-run the  command from the directory ```CNN-model/``` :
+from the directory ```CNN-model/``` :
 
 ``` docker build -t cnn-app . ```
 
-run the commands from the directory ```Frontend/``` :
+from the directory ```Frontend/``` :
 
 ``` docker build -t frontend-app . ```
 
