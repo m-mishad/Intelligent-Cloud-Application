@@ -91,7 +91,7 @@ repository of Minikube since the image is bigger in size.
 
 To create the deployments and services, follow the steps:
 
-Run all the commands from the directory YAML-Deployments-&-Services/
+Run all the commands from the directory ``` YAML-Deployments-&-Services/ ```
 
 To deploying cnn-app:
 
