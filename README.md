@@ -19,13 +19,10 @@ Microservice architecture:
 
 # Prerequisites:
 
-1.  Docker is installed in the machine. The installation procedure can be found here:
-    > (https://docs.docker.com/engine/install/)
-2.  Minikube installed in the machine. The installation procedure can be found here:
-    > (https://minikube.sigs.k8s.io/docs/start/)
+1.  Docker is installed in the machine. The installation procedure can be found here: (https://docs.docker.com/engine/install/)
+2.  Minikube installed in the machine. The installation procedure can be found here: (https://minikube.sigs.k8s.io/docs/start/)
 3.  Azure translate and speech service resources are created in Azure Cloud Or AWS user with programmatic access with appropriate permission to use the translate and Polly services.
 4.  All the deployments and services need to be deployed sequentially as mentioned.
-5.  A web browser is installed on the same host machine.
 
 
 ## Step 1: Building docker images:
