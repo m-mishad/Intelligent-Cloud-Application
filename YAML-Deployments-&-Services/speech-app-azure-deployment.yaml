@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: speech-app-azure
+  name: speech-app-azure
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speech-app-azure
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: speech-app-azure
+    spec:
+      containers:
+      - image: docker.io/library/speech-azure-app
+        name: speech-azure-app
+        resources: {}
+        imagePullPolicy: Never
+        env:
+         - name: "SPEECH_KEY"
+           value: "<replace with your azure speech service for speech key>"
+         - name: "SPEECH_LOCATION"
+           value: "<replace with your azure speech service for speech location>"
+
+status: {}

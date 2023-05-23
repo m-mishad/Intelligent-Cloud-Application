@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: cnn-app
+  name: cnn-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cnn-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cnn-app
+    spec:
+      containers:
+      - image: docker.io/library/cnn-app
+        name: cnn-app
+        resources: {}
+        imagePullPolicy: Never
+status: {}

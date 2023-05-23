@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: translate-app-aws
+  name: translate-app-aws
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: translate-app-aws
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: translate-app-aws
+    spec:
+      containers:
+      - image: docker.io/library/translate-aws-app
+        name: translate-aws-app
+        resources: {}
+        imagePullPolicy: Never
+        env:
+         - name: "AWS_ACCESS_KEY_ID"
+           value: "<replace with your aws access key>"
+         - name: "AWS_SECRET_ACCESS_KEY"
+           value: "<replace with your aws secret access key>"
+         - name: "AWS_DEFAULT_REGION"
+           value: "<replace with your aws default region>"
+
+status: {}

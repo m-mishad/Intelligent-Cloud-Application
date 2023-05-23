@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Digit Recognizer</title>
+  </head>
+  <body>
+    <h1>Digit Recognizer</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="image">
+      <br>
+      <label for="language">In which language you want to get the prediction? Select:</label>
+      <select name="language" id="language">
+        <option value="fi">Finnish</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Predict" onclick="showLoader()">
+    </form>
+
+    {% if audio_base64 %}
+      <audio controls autoplay>
+        <source src="data:audio/wav;base64,{{ audio_base64 }}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    {% endif %}
+
+    {% if digit and translation_text %}
+      <p>The predicted digit is {{ digit }}.</p>
+      <p>Translation: {{ translation_text }}</p>
+    {% endif %}
+
+    {% if error %}
+      <p>Error: {{ error }}</p>
+    {% endif %}
+
+    <div id="loader" style="display: none;">
+      <div>Loading...</div>
+    </div>
+
+    <script>
+      function showLoader() {
+        document.getElementById("loader").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
+

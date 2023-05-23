@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: frontend-app
+  name: frontend-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+      - image: docker.io/library/frontend--app
+        name: frontend--app
+        resources: {}
+        imagePullPolicy: Never
+        env:
+         - name: "PREDICTION"
+           value: "http://<replace with the cluster IP of the svc cnn-app>:5000/predict"
+         - name: "TRANSLATION"
+           value: "http://<replace with the cluster IP of the svc translation-app-azure>:5002/translate"
+         - name: "TTS"
+           value: "http://<replace with the cluster IP of the svc speech-app-azure>:5005/tts"
+status: {}

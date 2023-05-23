@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: translation-app-azure
+  name: translation-app-azure
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: translation-app-azure
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: translation-app-azure
+    spec:
+      containers:
+      - image: docker.io/library/translate-azure-app
+        name: translate-azure-app
+        env:
+          - name: "KEY"
+            value: "<replace with your azure translation service key>"
+          - name: "ENDPOINT"
+            value: "<replace with your azure translation service endpoint>"
+          - name: "LOCATION"
+            value: "<replace with your azure translation service location>"
+        resources: {}
+        imagePullPolicy: Never
+status: {}

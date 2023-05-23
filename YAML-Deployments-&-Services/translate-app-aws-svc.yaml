@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: translate-app-aws
+  name: translate-app-aws
+  namespace: default
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 5003
+    protocol: TCP
+    targetPort: 5003
+  selector:
+    app: translate-app-aws
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

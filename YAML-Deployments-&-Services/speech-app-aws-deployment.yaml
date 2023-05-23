@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: speech-app-aws
+  name: speech-app-aws
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speech-app-aws
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: speech-app-aws
+    spec:
+      containers:
+      - image: docker.io/library/speech-aws-app
+        name: speech-aws-app
+        resources: {}
+        imagePullPolicy: Never
+        env:
+         - name: "AWS_ACCESS_KEY_ID"
+           value: "<replace with your aws access key>"
+         - name: "AWS_SECRET_ACCESS_KEY"
+           value: "<Replace with your aws secret access key>"
+         - name: "AWS_DEFAULT_REGION"
+           value: "<replace with your aws default region>"
+
+status: {}
