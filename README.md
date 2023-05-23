@@ -191,20 +191,15 @@ Identify the following lines from the file
 access key, secret access key, and default region.
 
 ```vi speech-app-aws-deployment.yaml```
-
+```
 env:
-
-\- name: \"AWS_ACCESS_KEY_ID\"
-
-value: \"\<replace with your aws access key\>\"
-
-\- name: \"AWS_SECRET_ACCESS_KEY\"
-
-value: \"\<replace with your aws secret access key\>\"
-
-\- name: \"AWS_DEFAULT_REGION\"
-
-value: \"\<replace with your aws default region\>\"
+ - name: "AWS_ACCESS_KEY_ID"
+   value: "<replace with your aws access key>"
+ - name: "AWS_SECRET_ACCESS_KEY"
+   value: "<Replace with your aws secret access key>"
+ - name: "AWS_DEFAULT_REGION"
+   value: "<replace with your aws default region>"
+```
 
 ```kubectl apply -f speech-app-aws-deployment.yaml```
 
@@ -223,7 +218,6 @@ appropriate ```IP``` and ```port``` of ```translate-app-aws``` and ```speech-app
 ```vi frontend-app-deployment.yaml```
 ```
 env:
-
 -  name: "PREDICTION"
    value: http://<replace with the cluster IP of the svc cnn-app>:5000/predict
 -  name: "TRANSLATION"
@@ -253,7 +247,7 @@ Run the command: ```kubectl get pods -o wide```
 
 Visit the url from the browser:
 
-http://Replace with the internal IP address of the node:30364
+```http://<Replace with the internal IP address of the node>:30364```
 
 The sample handwritten digit images are located under the directory
 ```Test-images/```
