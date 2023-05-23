@@ -59,7 +59,7 @@ run the  command from the directory CNN-model/ :
 
 run the commands from the directory Frontend/ :
 
-``` docker build -t frontend\--app . ```
+``` docker build -t frontend-app . ```
 
 ``` docker images ```
 
