@@ -26,7 +26,7 @@ Microservice architecture:
 
 4.  A web browser is installed on the same host machine.
 
-**[Directory structure:]{.underline}**
+[Directory structure:]
 
 ├── CNN-model
 
