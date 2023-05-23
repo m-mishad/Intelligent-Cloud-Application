@@ -11,11 +11,11 @@ the translated language with audio playback in the web browser.
 
 The high-level architecture diagram of this application is as follows:
 
-![](media/image1.jpeg){width="6.5in" height="2.8472222222222223in"}
+![](media/image1.jpeg)
 
 Microservice architecture:
 
- ![](media/image2.png){width="4.5655544619422574in" height="3.811945538057743in"}
+ ![](media/image2.png)
 
 # Prerequisites:
 
