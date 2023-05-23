@@ -107,6 +107,7 @@ For translation, we can choose any of the deployment. We can choose
 either translation for azure or translation for AWS.
 
 - Translation in Azure:
+
 Identify the following lines from the file
 ```translation-app-azure-deployment.yaml``` and replace the ```value``` with the
 Azure translation service key, endpoint, and location.
@@ -127,7 +128,6 @@ Azure translation service key, endpoint, and location.
 ```kubectl apply -f translation-app-azure-svc.yaml```
 
 - Translation in Azure:
-
 
 Identify the following lines from the file
 ```translate-app-aws-deployment.yaml``` and replace the ```value``` with your AWS
