@@ -119,7 +119,7 @@ Azure translation service key, endpoint, and location.
 
 ```kubectl apply -f translation-app-azure-svc.yaml```
 
-- Translation in Azure:
+- Translation in AWS:
 
 Identify the following lines from the file
 ```translate-app-aws-deployment.yaml``` and replace the ```value``` with your AWS
